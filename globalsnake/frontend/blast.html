@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sequence Analysis | VenomOncoDB</title>
+<link rel="stylesheet" href="css/style.css?v=toxinlab-20261021">
+<script src="js/api.js"></script>
+</head>
+<body class="interior-page">
+<nav><a href="index.html" class="brand-link"><img class="logo-img" src="../assets/logo.svg?v=20261021-home-redesign" alt="VenomOncoDB"></a><div class="navlinks"><a href="index.html">Home</a><a href="explorer.html">Explorer</a><a href="research.html">Research Articles</a><a href="research-center.html">Research Centre</a><a href="profiler.html">Peptide Profiler</a><a href="toxin-lab.html">Toxin Lab</a><a href="evidence-lab.html">Evidence Lab</a><a href="benchmark-lab.html">Benchmark Lab</a><a href="validation-lab.html">Validation Lab</a><a class="active" href="blast.html">Sequence Analysis</a><a href="structure.html">3D Lab</a><a href="dashboard.html">Insights</a><a href="methodology.html">Method</a><a href="about.html">About</a><a class="nav-api" href="api.html">API</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" title="Switch theme">☼ <span>Light theme</span></button></div></nav>
+<main>
+<section class="pagehead"><div class="eyebrow">SEQUENCE BIOINFORMATICS</div><h1>Sequence Analysis & BLASTP</h1><p>Inspect a peptide sequence locally, then submit it to NCBI BLASTP for external sequence-similarity analysis. Similarity is reported as sequence evidence and is not treated as proof of anticancer function.</p></section>
+<section class="detail-grid">
+<section>
+<div class="panel">
+<div class="eyebrow">USER INPUT</div>
+<h2 style="margin:8px 0 6px">Enter a peptide sequence</h2>
+<textarea id="seqInput" class="input" style="min-height:170px;width:100%;font-family:ui-monospace,monospace" placeholder="Example: MCMPCFTTDHQMARKCDDCCGGKGRGKCYGPQCLCR"></textarea>
+<div class="filters" style="margin-top:12px"><button class="btn primary" onclick="analyzeSequence()">Analyze sequence</button><button class="btn secondary" onclick="loadExample()">Use example</button><button class="btn secondary" onclick="clearBlast()">Clear</button></div>
+<div id="seqStatus" class="search-status"></div>
+</div>
+<div class="panel" style="margin-top:18px"><div class="eyebrow">LOCAL ANALYSIS</div><div id="analysis"><div class="empty"><div class="empty-icon">⌁</div><strong>Waiting for sequence</strong><span>Enter a peptide sequence to calculate local properties.</span></div></div></div>
+</section>
+<aside>
+<div class="panel"><div class="eyebrow">BLASTP</div><h2 style="margin:8px 0">Sequence similarity search</h2><p style="color:var(--muted);line-height:1.7">VenomOncoDB prepares the protein sequence and opens the official NCBI BLASTP interface. BLASTP searches protein databases using a protein query.</p><button class="button primary" onclick="submitBlast()">Open NCBI BLASTP →</button><div class="notice" style="margin-top:14px">External analysis: NCBI performs the similarity search. Results should be reviewed with biological context and primary-source evidence.</div></div>
+<div class="panel" style="margin-top:18px"><div class="eyebrow">WHY IT MATTERS</div><div class="kv"><b>Sequence</b><span>Identity & composition</span></div><div class="kv"><b>BLASTP</b><span>Similarity / homolog context</span></div><div class="kv"><b>Structure</b><span>3D evidence where available</span></div><div class="kv"><b>Activity</b><span>Cell-line experiment</span></div></div>
+</aside>
+</section>
+</main>
+<footer class="footer">VenomOncoDB · Sequence similarity is not a therapeutic prediction.</footer>
+<script src="js/blast.js"></script>
+<script src="js/theme.js"></script></body></html>

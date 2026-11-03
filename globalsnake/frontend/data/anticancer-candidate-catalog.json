@@ -1,0 +1,233 @@
+[
+  {
+    "name": "Lycosin-I",
+    "group": "Spider",
+    "species": "Lycosa singoriensis",
+    "evidence": "Preclinical prostate-cancer research; apoptosis and migration-related findings reported",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/29763387/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "lycosin-I"
+  },
+  {
+    "name": "Smp24",
+    "group": "Scorpion",
+    "species": "Scorpio maurus palmatus",
+    "evidence": "Preclinical HepG2 antitumour study; multiple mechanisms reported",
+    "status": "Primary paper linked",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9607800/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "Smp24 scorpion peptide"
+  },
+  {
+    "name": "BmK AGAP",
+    "group": "Scorpion",
+    "species": "Buthus martensii (Mesobuthus martensii)",
+    "evidence": "Breast-cancer cell research reports effects on stemness, EMT, migration and invasion",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/30740360/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "BmK AGAP"
+  },
+  {
+    "name": "Crotamine",
+    "group": "Snake",
+    "species": "Crotalus durissus terrificus",
+    "evidence": "Preclinical melanoma/tumour-targeting research; study endpoints and models vary",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/21834748/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "crotamine"
+  },
+  {
+    "name": "Chlorotoxin",
+    "group": "Scorpion",
+    "species": "Leiurus quinquestriatus",
+    "evidence": "Glioma targeting/invasion research; do not infer clinical anticancer treatment efficacy",
+    "status": "Primary papers linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/9809993/",
+    "pdb": "7X41",
+    "structure": "Experimental PDB 7X41; deposited construct differs from mature 36-aa sequence",
+    "search": "chlorotoxin"
+  },
+  {
+    "name": "Melittin",
+    "group": "Bee",
+    "species": "Apis mellifera",
+    "evidence": "Extensive preclinical cancer-model literature; membrane activity and haemolysis are important limitations",
+    "status": "Review linked; follow primary studies",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9235364/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "melittin cancer"
+  },
+  {
+    "name": "Mastoparan",
+    "group": "Wasp",
+    "species": "Wasp venom (multiple species reported)",
+    "evidence": "Preclinical leukemia, myeloma and breast-cancer cell research; lytic activity reported",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/27693190/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "mastoparan anticancer"
+  },
+  {
+    "name": "Mastoparan M",
+    "group": "Wasp/Hornet",
+    "species": "Hornet venom peptide",
+    "evidence": "In-vitro tumour-cell cytolysis reported for synthetic D- and L-forms; form matters",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/10568222/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "mastoparan M"
+  },
+  {
+    "name": "Mastoparan-C (MP-C)",
+    "group": "Wasp",
+    "species": "Wasp venom peptide",
+    "evidence": "Preclinical activity across several cancer-cell lines reported; normal-cell effects also evaluated",
+    "status": "Primary paper linked",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/6001651/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "mastoparan C"
+  },
+  {
+    "name": "Mastoparan X (MPX)",
+    "group": "Wasp",
+    "species": "Vespidae venom",
+    "evidence": "Recent in-vitro antimelanoma study reports cytotoxicity and membrane effects",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42028705/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "mastoparan X"
+  },
+  {
+    "name": "Polybia-MP1 (MP1)",
+    "group": "Wasp",
+    "species": "Polybia wasp venom",
+    "evidence": "Recent in-vitro antimelanoma study reports cytotoxicity; activity is not clinical validation",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42028705/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "Polybia MP1"
+  },
+  {
+    "name": "BmKCT",
+    "group": "Scorpion",
+    "species": "Buthus martensii (Mesobuthus martensii)",
+    "evidence": "Chlorotoxin-like peptide studied in glioma invasion/migration models",
+    "status": "Review-linked; primary study verification recommended",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6410669/",
+    "pdb": "",
+    "structure": "No sequence-matched PDB entry linked here; search repository",
+    "search": "BmKCT glioma"
+  },
+  {
+    "name": "Crotoxin",
+    "group": "Snake",
+    "species": "Crotalus durissus terrificus",
+    "evidence": "Preclinical triple-negative breast cancer study; crotoxin is a multi-component toxin complex, not a short peptide.",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40120860/",
+    "pdb": "",
+    "structure": "Search component/complex separately; no exact anticancer construct linked here",
+    "search": "crotoxin"
+  },
+  {
+    "name": "Contortrostatin",
+    "group": "Snake",
+    "species": "Agkistrodon contortrix contortrix",
+    "evidence": "Snake-venom disintegrin studied for breast-cancer adhesion, invasion and xenograft growth effects.",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/10966001/",
+    "pdb": "",
+    "structure": "No exact sequence-matched PDB entry linked here; search repository",
+    "search": "contortrostatin"
+  },
+  {
+    "name": "Salmosin",
+    "group": "Snake",
+    "species": "Agkistrodon halys brevicaudus",
+    "evidence": "Snake-venom disintegrin studied in melanoma adhesion, invasion and experimental metastasis models.",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/10944460/",
+    "pdb": "",
+    "structure": "No exact sequence-matched PDB entry linked here; search repository",
+    "search": "salmosin"
+  },
+  {
+    "name": "Echistatin",
+    "group": "Snake",
+    "species": "Echis carinatus",
+    "evidence": "Snake-venom disintegrin studied for tumour-cell adhesion and experimental metastasis; effects are not equivalent to direct cytotoxicity.",
+    "status": "Primary paper linked",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/21528271/",
+    "pdb": "",
+    "structure": "Search RCSB for echistatin; verify exact construct and chain",
+    "search": "echistatin"
+  },
+  {
+    "name": "Rhodostomin (r-RN)",
+    "group": "Snake",
+    "species": "Calloselasma rhodostoma",
+    "evidence": "Disintegrin studied in integrin-mediated adhesion and cancer-related models; endpoint-specific evidence required",
+    "status": "Literature discovery link; curate assay-level details",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/?term=rhodostomin+cancer+primary+study",
+    "pdb": "",
+    "structure": "Search RCSB for rhodostomin; verify exact construct and chain",
+    "search": "rhodostomin"
+  },
+  {
+    "name": "Lebestatin",
+    "group": "Snake",
+    "species": "Macrovipera lebetina",
+    "evidence": "Disintegrin-related integrin/adhesion research; anticancer interpretation requires the specific study",
+    "status": "Literature discovery link; curate assay-level details",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/?term=lebestatin+cancer+primary+study",
+    "pdb": "",
+    "structure": "No exact sequence-matched PDB entry linked here; search repository",
+    "search": "lebestatin"
+  },
+  {
+    "name": "Jararhagin",
+    "group": "Snake",
+    "species": "Bothrops jararaca",
+    "evidence": "Venom metalloproteinase studied in tumour/angiogenesis biology; it is an enzyme, not a short ACP",
+    "status": "Literature discovery link; distinguish enzyme effects from peptide activity",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/?term=jararhagin+cancer+angiogenesis+study",
+    "pdb": "",
+    "structure": "Search PDB for jararhagin and confirm entity/construct",
+    "search": "jararhagin"
+  },
+  {
+    "name": "Apamin–melittin conjugates",
+    "group": "Bee",
+    "species": "Apis mellifera-derived components / engineered conjugates",
+    "evidence": "Review describes preclinical conjugate/formulation studies; engineered conjugates are not the native peptides",
+    "status": "Review linked; formulation-specific primary study needed",
+    "source": "https://doi.org/10.1016/j.phrs.2024.107430",
+    "pdb": "",
+    "structure": "A conjugate/formulation needs its own structural match; no exact structure linked",
+    "search": "apamin melittin conjugate"
+  },
+  {
+    "name": "Mucroporin-M1",
+    "group": "Scorpion",
+    "species": "Lychas mucronatus",
+    "evidence": "Candidate for literature review; verify cancer-specific primary evidence before assigning anticancer activity",
+    "status": "Discovery candidate; anticancer evidence not established by this record",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/?term=mucroporin-M1+cancer+primary+study",
+    "pdb": "",
+    "structure": "No exact sequence-matched PDB entry linked here; search repository",
+    "search": "mucroporin-M1"
+  }
+]

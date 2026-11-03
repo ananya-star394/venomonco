@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3D Molecular Lab | VenomOncoDB</title><link rel="stylesheet" href="css/style.css?v=toxinlab-20261021"><script src="https://3dmol.csb.pitt.edu/build/3Dmol-min.js"></script></head><body class="interior-page">
+<nav><a href="index.html" class="brand-link"><img class="logo-img" src="../assets/logo.svg?v=20261021-home-redesign" alt="VenomOncoDB"></a><div class="navlinks"><a href="index.html">Home</a><a href="explorer.html">Explorer</a><a href="research.html">Research Articles</a><a href="research-center.html">Research Centre</a><a href="profiler.html">Peptide Profiler</a><a href="toxin-lab.html">Toxin Lab</a><a href="evidence-lab.html">Evidence Lab</a><a href="benchmark-lab.html">Benchmark Lab</a><a href="validation-lab.html">Validation Lab</a><a href="blast.html">Sequence Analysis</a><a class="active" href="structure.html">3D Lab</a><a href="dashboard.html">Insights</a><a href="methodology.html">Method</a><a href="about.html">About</a><a class="nav-api" href="api.html">API</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" title="Switch theme">☼ <span>Light theme</span></button></div></nav>
+<main><section class="pagehead"><div class="eyebrow">STRUCTURAL BIOINFORMATICS</div><h1>3D Molecular Lab</h1><p>Load a verified PDB identifier and inspect the molecule directly in the browser. The viewer supports rotation, zooming and molecular representation changes through the 3Dmol.js interface.</p></section>
+<section class="lab-grid"><div class="panel" style="padding:10px"><div id="labViewer" class="structure-frame lab-view"></div><div class="structure-controls"><button class="button" onclick="setRep('cartoon')">Cartoon</button><button class="button" onclick="setRep('stick')">Sticks</button><button class="button" onclick="setRep('sphere')">Sphere</button><button class="button" onclick="resetView()">Reset 3D</button></div></div><aside class="lab-side"><div class="panel"><div class="code-label">PDB STRUCTURE</div><div class="search-box" style="margin-top:10px"><input id="pdbInput" value="7X41" placeholder="e.g. 7X41"><button class="button primary" onclick="loadPdb()">Load</button></div><p class="small" style="margin-top:10px">Example: PDB 7X41 is used here as a reference structure. Verify peptide-to-structure mapping before interpreting a structure as evidence of anticancer activity.</p></div><div class="panel"><div class="code-label">WHAT 3D ADDS</div><p class="small">Interactive structural inspection can help users discuss molecular shape, residue environments and structure–sequence relationships. It does not establish therapeutic efficacy by itself.</p></div><div class="panel"><div class="code-label">EXTERNAL SOURCE</div><a id="rcsbLink" class="button" style="width:100%;margin-top:10px" href="https://www.rcsb.org/structure/7X41" target="_blank" rel="noopener">Open RCSB PDB ↗</a></div></aside></section></main><footer class="footer">VenomOncoDB · 3D Molecular Lab · Structure visualization for research and education.</footer>
+<script>
+let viewer=null, currentModel=null, currentPdb='7X41', currentRep='cartoon';
+const el=document.getElementById('labViewer'), input=document.getElementById('pdbInput'), rcsb=document.getElementById('rcsbLink');
+function syncPdbLink(id){id=(id||input.value).trim().toUpperCase();if(!/^[A-Z0-9]{4}$/.test(id)){rcsb.href='https://www.rcsb.org';rcsb.textContent='Open RCSB PDB ↗';return;}rcsb.href='https://www.rcsb.org/structure/'+encodeURIComponent(id);rcsb.textContent='Open RCSB PDB · '+id+' ↗';}
+function showMessage(title,msg){el.innerHTML='<div class="empty"><strong>'+title+'</strong><span>'+msg+'</span></div>';}
+async function loadPdb(){
+ const id=input.value.trim().toUpperCase();
+ if(!/^[A-Z0-9]{4}$/.test(id)){showMessage('Invalid PDB identifier','Enter a four-character PDB ID, for example 1CRN or 7X41.');return;}
+ currentPdb=id;syncPdbLink(id);
+ el.innerHTML='<div class="viewer-loading">LOADING PDB '+id+'…</div>';
+ try{
+   let response=await fetch('https://files.rcsb.org/download/'+encodeURIComponent(id)+'.pdb');
+   let format='pdb';
+   if(!response.ok){response=await fetch('https://files.rcsb.org/download/'+encodeURIComponent(id)+'.cif');format='cif';}
+   if(!response.ok)throw new Error('PDB entry was not found or the RCSB service is unavailable.');
+   const data=await response.text();
+   if(!data.trim() || data.toLowerCase().includes('404 not found'))throw new Error('No structure file was returned for '+id+'.');
+   if(!window.$3Dmol)throw new Error('The 3Dmol.js library did not load. Check your internet connection.');
+   viewer=$3Dmol.createViewer(el,{backgroundColor:'#02070c',antialias:true});
+   currentModel=viewer.addModel(data,format);
+   viewer.setStyle({},currentRep==='cartoon'?{cartoon:{color:'spectrum',opacity:.98}}:currentRep==='stick'?{stick:{radius:.16,colorscheme:'Jmol'}}:{sphere:{scale:.32,colorscheme:'Jmol'}});
+   viewer.zoomTo();viewer.render();
+ }catch(err){viewer=null;currentModel=null;showMessage('Could not load '+id,err.message+' You can still open the matching RCSB entry using the link.');}
+}
+function setRep(rep){currentRep=rep;if(!viewer||!currentModel)return;viewer.setStyle({},rep==='cartoon'?{cartoon:{color:'spectrum',opacity:.98}}:rep==='stick'?{stick:{radius:.16,colorscheme:'Jmol'}}:{sphere:{scale:.32,colorscheme:'Jmol'}});viewer.render();}
+function resetView(){if(!viewer)return;viewer.zoomTo();viewer.render();}
+input.addEventListener('input',()=>syncPdbLink(input.value));
+input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();loadPdb();}});
+const preset=new URLSearchParams(location.search).get('pdb');if(preset&&/^[A-Z0-9]{4}$/i.test(preset))input.value=preset.toUpperCase();
+syncPdbLink(input.value.toUpperCase());loadPdb();
+</script><script src="js/theme.js"></script></body></html>
