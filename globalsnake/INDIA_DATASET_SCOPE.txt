@@ -1,8 +1,0 @@
-VenomOncoDB India-wide dataset scope
-
-Goal: >=100 distinct, source-supported venom-derived anticancer peptides.
-Geographic scope: India-wide, not a single state. Include relevant venomous animal groups.
-Do not count general toxin records as anticancer peptides unless anticancer experimental evidence is source-supported.
-Do not count multiple assays/publications for one peptide as multiple unique peptides.
-The PubMed discovery script creates a candidate paper queue only; manual curation is required.
-No fabricated or synthetic records are permitted.

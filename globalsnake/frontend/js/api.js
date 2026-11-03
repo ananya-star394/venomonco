@@ -1,3 +1,0 @@
-async function api(route, params={}){const q=new URLSearchParams({route,...params});const r=await fetch('../api/index.php?'+q);return await r.json()}
-async function loadSummary(){try{const r=await api('summary');if(!r.success)return;for(const [id,key] of [['peptides','verified_venom_peptides'],['organisms','organisms'],['activity','activity_records'],['papers','publications'],['cells','cell_lines'],['cancers','cancer_types']]){const e=document.getElementById(id);if(e)e.textContent=r.data[key]??0}}catch(e){console.error(e)}}
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
